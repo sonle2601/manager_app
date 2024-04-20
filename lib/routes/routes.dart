@@ -1,0 +1,298 @@
+import 'package:get/get.dart';
+import 'package:manage_app/routes/route_name.dart';
+import 'package:manage_app/view/account/information/information_user_screen.dart';
+import 'package:manage_app/view/account/security/password_change_screen.dart';
+import 'package:manage_app/view/approval/approval_screen.dart';
+import 'package:manage_app/view/approval/attendance/attendance_approval_detail.dart';
+import 'package:manage_app/view/approval/attendance/attendance_approval_list_screen.dart';
+import 'package:manage_app/view/approval/exit/exit_approval_detail.dart';
+import 'package:manage_app/view/approval/exit/exit_approval_list_screen.dart';
+import 'package:manage_app/view/approval/late_early/late_early_approval_detail.dart';
+import 'package:manage_app/view/approval/late_early/late_early_approval_list_screen.dart';
+import 'package:manage_app/view/approval/leave/leave_approval_detail.dart';
+import 'package:manage_app/view/approval/leave/leave_approval_list_screen.dart';
+import 'package:manage_app/view/saraly/salary_bonus/salary_bonus_add_screen.dart';
+import 'package:manage_app/view/saraly/salary_bonus/salary_bonus_detail_screen.dart';
+import 'package:manage_app/view/saraly/salary_penalty/salary_penalty_add_screen.dart';
+import 'package:manage_app/view/saraly/salary_penalty/salary_penalty_detail_screen.dart';
+import 'package:manage_app/view/saraly/salary_penalty/salary_penalty_list_screen.dart';
+import 'package:manage_app/view/task/employee/employee_info_form.dart';
+import 'package:manage_app/view/task/employee/employee_info_widget.dart';
+import 'package:manage_app/view/home_view.dart';
+import 'package:manage_app/view/auth/login_screen.dart';
+import 'package:manage_app/view/main_screen.dart';
+import 'package:manage_app/view/saraly/saraly_detail_screen.dart';
+import 'package:manage_app/view/saraly/salary_list_screen.dart';
+import 'package:manage_app/view/task/news_feed/new_add_screen.dart';
+import 'package:manage_app/view/task/news_feed/news_list_screen.dart';
+import 'package:manage_app/view/task/news_feed/news_update_screen.dart';
+import 'package:manage_app/view/task/store/store_screen.dart';
+import 'package:manage_app/view/task/parts/add_parts_screen.dart';
+import 'package:manage_app/view/task/employee/employee_invite_form.dart';
+import 'package:manage_app/view/task/employee/list_employee_screen.dart';
+import 'package:manage_app/view/task/parts/parts_screen.dart';
+import 'package:manage_app/view/task/store/update_store_screen.dart';
+import 'package:manage_app/view/task/time_clock_device/attendance_detail_screen.dart';
+import 'package:manage_app/view/task/time_clock_device/list_attendance_screen.dart';
+import 'package:manage_app/view/task/work_schedule/common_work_schedule_screen.dart';
+import 'package:manage_app/view/task/work_shift/work_shift_screen.dart';
+import 'package:manage_app/view/task/task_screen.dart';
+import 'package:manage_app/view/task/time_clock_device/time_clock_device_form.dart';
+import 'package:manage_app/view/task/work_schedule/work_schedule_screen.dart';
+import 'package:manage_app/widgets/task/work_shift_widget.dart';
+import '../view/auth/register_screen.dart';
+import '../view/home/home_screen.dart';
+import '../view/information_screen.dart';
+import '../view/saraly/salary_bonus/salary_bonus_list_screen.dart';
+import '../view/saver_screen.dart';
+import '../view/task/employee/invite_employee_screen.dart';
+
+class AppRoutes {
+  static appRoutes() =>[
+
+    GetPage(name: RouteName.registerScreen,
+        page:() =>  RegisterScreen(),
+        transitionDuration: Duration(microseconds: 250),
+        transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.homeView,
+        page:() =>  HomeView(),
+        transitionDuration: Duration(microseconds: 250),
+        transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.informationScreen,
+      page:() =>  InformationScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+
+    GetPage(name: RouteName.saverScreen,
+      page:() =>  SaverScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.loginScreen,
+      page:() =>  LoginScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+
+    GetPage(name: RouteName.salePointScreen,
+      page:() =>  StoreScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+
+    GetPage(name: RouteName.updateStoreScreen,
+      page:() =>  UpdateStoreScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.taskScreen,
+      page:() =>  TaskScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+
+    GetPage(name: RouteName.storeScreen,
+      page:() =>  StoreScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.storeScreen,
+      page:() =>  StoreScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.partsScreen,
+      page:() =>  PartsScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.addParts,
+      page:() =>  AddPartsScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.workShiftScreen,
+      page:() =>  WorkShiftScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.workShiftWidget,
+      page:() =>  WorkShiftWidget(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.employeeScreen,
+      page:() =>  EmployeeScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.inviteEmployeeForm,
+      page:() =>  EmployeeInviteForm(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.listEmployeeScreen,
+      page:() =>  ListEmployeeScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.employeeInfo,
+      page:() =>  EmployeeInfoWidget(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.employeeInfoForm,
+      page:() =>  EmployeeInfoForm(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.workScheduleScreen,
+      page:() =>  WorkScheduleScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.timeClockDeviceForm,
+      page:() =>  TimeClockDeviceForm(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.homeScreen,
+      page:() =>  HomeScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.saralyListScreen,
+      page:() =>  SalaryListScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.salaryDetailScreen,
+      page:() =>  SalaryDetailScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.mainScreen,
+      page:() =>  MainScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.approvalScreen,
+      page:() =>  ApprovalScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.leaveApprovalListScreen,
+      page:() =>  LeaveApprovalListScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.leaveApprovalDetail,
+      page:() =>  LeaveApprovalDetail(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.lateEarlyApprovalListScreen,
+      page:() =>  LateEarlyApprovalListScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.lateEarlyApprovalDetail,
+      page:() =>  LateEarlyApprovalDetail(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.commonWorkScheduleScreen,
+      page:() =>  CommonWorkScheduleScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.listAttendanceScreen,
+      page:() =>  ListAttendanceScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.detailAttendanceScreen,
+      page:() =>  AttendanceDetailScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.attendanceApprovalListScreen,
+      page:() =>  AttendanceApprovalListScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.attendanceApprovalDetail,
+      page:() =>  AttendanceApprovalDetail(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.exitApprovalListScreen,
+      page:() =>  ExitApprovalListScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.exitApprovalDetail,
+      page:() =>  ExitApprovalDetail(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.salaryBonusListScreen,
+      page:() =>  SalaryBonusListScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.salaryBonusDetailScreen,
+      page:() =>  SalaryBonusDetailScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.salaryBonusAddScreen,
+      page:() =>  SalaryBonusAddScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.salaryPenaltyAddScreen,
+      page:() =>  SalaryPenaltyAddScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.salaryPenaltyDetailScreen,
+      page:() =>  SalaryPenaltyDetailScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.salaryPenaltyListScreen,
+      page:() =>  SalaryPenaltyListScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.newsListScreen,
+      page:() =>  NewsListScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.newsAddScreen,
+      page:() =>  NewAddScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.newsUpdateScreen,
+      page:() =>  NewsUpdateScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.passwordChangeScreen,
+      page:() =>  PasswordChangeScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+    GetPage(name: RouteName.infoUserScreen,
+      page:() =>  InformationUserScreen(),
+      transitionDuration: Duration(microseconds: 250),
+      transition: Transition.leftToRightWithFade,
+    ),
+  ];
+}
